@@ -1,0 +1,55 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+// Variables
+@import 'variables';
+
+// Main layout styles
+
+body {
+  background-color: $body-bg;
+  color: $body-text;
+  font-family: $font-family;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+}
+
+.main-wrapper {
+  max-width: 900px;
+  margin: auto;
+  border: $body-border;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header {
+  border-bottom: $body-border;
+  height: 100px;
+  width: 100%;
+}
+
+.sidebar {
+  min-width: 200px;
+}
+
+.main {
+  flex: 1;
+}
+.content {
+  padding: 30px;
+  width: 100%;
+}
+
+.footer {
+  border-top: $body-border;
+  padding: 3px 10px;
+  text-align: center;
+  width: 100%;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+// components
+@import 'common/navbar';
+@import 'common/ads';
