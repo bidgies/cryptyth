@@ -16,6 +16,8 @@ class CreateHunters extends Migration
         Schema::create('hunters', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name', 500)->default('');
+            $table->string('handle', 500)->default('');
+            $table->boolean('npc')->default(false);
             $table->timestamps();
         });
 

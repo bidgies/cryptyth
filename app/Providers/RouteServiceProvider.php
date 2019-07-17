@@ -51,7 +51,7 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected function mapWebRoutes()
     {
-      Route::view('/{path?}', 'welcome')->where('path', '.*')->middleware('web')->name('react');
+      Route::view('/{any?}', 'welcome')->where('any', '^(?!nova|nova-api).*$')->middleware('web')->name('react');
     }
 
     /**

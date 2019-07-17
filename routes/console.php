@@ -46,7 +46,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use App\Services\\".$name."Service;
 
-class ForumServiceProvider extends ServiceProvider
+class ".$name."ServiceProvider extends ServiceProvider
 {
     /**
      * Register services.

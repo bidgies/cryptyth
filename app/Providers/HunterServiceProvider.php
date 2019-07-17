@@ -5,7 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use App\Services\HunterService;
 
-class ForumServiceProvider extends ServiceProvider
+class HunterServiceProvider extends ServiceProvider
 {
     /**
      * Register services.
