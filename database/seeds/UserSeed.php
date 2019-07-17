@@ -3,14 +3,17 @@
 use Illuminate\Database\Seeder;
 
 use App\Services\Contracts\UserService;
+use App\Services\Contracts\HunterService;
 
 class UserSeed extends Seeder
 {
 
   public $userService;
+  public $hunterService;
 
-  public function __construct(UserService $userService) {
+  public function __construct(UserService $userService, HunterService $hunterService) {
     $this->userService = $userService;
+    $this->hunterService = $hunterService;
   }
     /**
      * Run the database seeds.
@@ -32,8 +35,8 @@ class UserSeed extends Seeder
         null
       );
       $this->userService->createUser(
-        '3',
-        '3@bidgies.com',
+        'BlackSapphire',
+        'sapphy@bidgies.com',
         'secret',
         null
       );
@@ -43,17 +46,13 @@ class UserSeed extends Seeder
         'secret',
         null
       );
-      $this->userService->createUser(
-        'Eleven',
-        'eleven@bidgies.com',
-        'secret',
-        null
+      $this->hunterService->createHunterNpc(
+        'Anna',
+        'vanna_things'
       );
-      $this->userService->createUser(
-        '6',
-        '6@bidgies.com',
-        'secret',
-        null
+      $this->hunterService->createHunterNpc(
+        'Tibs',
+        'ol_yeller'
       );
       $this->userService->createUser(
         'Falconblade',
@@ -61,21 +60,33 @@ class UserSeed extends Seeder
         'secret',
         null
       );
+      $this->hunterService->createHunterNpc(
+        'NPC 3',
+        'booya'
+      );
       $this->userService->createUser(
-        '8',
-        '8@bidgies.com',
+        'Sylphie',
+        'sylphie@bidgies.com',
         'secret',
         null
       );
+      $this->hunterService->createHunterNpc(
+        'NPC 4',
+        'ahdhg'
+      );
       $this->userService->createUser(
-        '9',
-        '9@bidgies.com',
+        'Eleven',
+        'eleven@bidgies.com',
         'secret',
         null
       );
+      $this->hunterService->createHunterNpc(
+        'NPC 5',
+        'dhgjsfd'
+      );
       $this->userService->createUser(
-        '10',
-        '10@bidgies.com',
+        'Maui',
+        'maui@bidgies.com',
         'secret',
         null
       );
